@@ -1,80 +1,60 @@
 % !TEX program = xelatex
-
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{ctex}
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
+\pagenumbering{gobble} % 隐藏页码
 
-\name{Bin Yuan}
+\name{廖顶行}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{2169298883@qq.com} \textperiodcentered\
+  \phone{(+86) 131-9667-9030} \textperiodcentered\
+  \github[sheeta2005]{https://github.com/sheeta2005}}
 
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{西安邮电大学}}{2024.09 -- 2028.06}
+\textit{软件工程 | 本科 | 预计2028年6月毕业 |专业排名前30\%}
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{TakeMe养老志愿服务系统}}{2026.03 -- 2026.06}
+\role{后端独立开发}{个人开源项目，仓库50+有效提交记录}
+简介：三角色社区养老志愿平台，覆盖下单、接单、30分钟超时取消、消息推送、文件存储、权限管控全流程；开源面向公益学习，解决订单积压、运维成本高、权限混乱问题。
+
+技术栈：Java21、SpringBoot3.2、MySQL8、MyBatis-Plus、Redis、RabbitMQ、JWT、Druid、 阿里云OSS、WebSocket
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item 缓存优化：AOP封装Redis缓存、分布式锁、限流注解，缓存空值防穿透
+  \item 异步解耦：RabbitMQ死信队列自动取消超时订单，替代定时轮询，异步解耦订单消息通知
+  \item 工程规范：JWT权限拦截器实现多角色访问控制；搭建全局异常处理器+统一返回体，规范前后端接口交互；集成Swagger接口文档，大幅提升前后端联调效率
+  \item 业务落地：对接阿里云OSS实现图片文件安全存储；通过WebSocket实现订单状态前端实时推送
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{VitePress个人技术博客}}{2026.01 -- 至今}
+\role{独立搭建与运维}{个人技术沉淀站点，60+持续代码提交}
+项目简介：基于VitePress搭建后端技术知识库，用于沉淀Java后端、分布式中间件、算法刷题笔记，依托\textbf{Cloudflare Pages}完成CI/CD自动化部署，代码提交后自动构建发布，配置自有域名实现公网稳定访问。
+
+开源地址：https://github.com/sheeta2005/sheetaBlog
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item 全文检索、自动分级侧边栏，优化文档查阅体验，常态化复盘后端面试知识点
+  \item 依托Cloudflare Pages流水线实现全自动部署
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
-\begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
-\end{itemize}
-
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
+\section{\faCogs\ 专业技能}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+  \item 后端基础：熟练掌握Java基础、集合、JVM、多线程，掌握SpringBoot3、MyBatis-Plus主流开发框架
+  \item 数据库：熟练使用MySQL，掌握索引优化、分表设计、事务隔离级别，熟悉Druid连接池调优
+  \item 分布式中间件：了解Redis缓存、分布式锁、接口限流；使用过RabbitMQ死信队列实现异步延时业务
+  \item 工程工具：使用过JWT登录鉴权、WebSocket实时通信、阿里云OSS、Linux基础命令与Git版本控制
+  \item AI编程：使用过Qoder集成idea、Vibe Coding、Claude Code等AI编程工具
+  \item 算法刷题：洛谷加力扣等刷题平台刷题总数超200，对常规算法有所了解
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
+\section{\faBook\ 日常学习}
 \begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+  \item LeetCode ID：sheeta1998，坚持每日刷题，维护独立刷题仓库：https://github.com/sheeta2005/lec
+  \item CSDN ID：sheeta1998，同步输出后端技术博客与解题复盘文章，阅读量超过五万
+  \item 英语四级已过，六级待出分
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
